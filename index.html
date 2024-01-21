@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Document</title>
+</head>
+<body>
+
+  <header class="bg-blue-500 h-28">
+    <div class='flex justify-between  bg-sky-200 py-10 px-20'>
+      <h1 class='ml-10 font-bold text-2xl'>Search Github Repository</h1>
+      <div class='mr-10' >
+        <input
+          id="search_Input"
+          type="text"
+          placeholder='🔍 Search Repos'
+          class='mx-2 mr-0 px-2 py-2 rounded-sm border border-gray-800 border-r-0 rounded-r-none'
+        />
+        <button class='search_btn bg-white py-2 px-2 border border-gray-800 rounded-r-sm hover:bg-slate-200' onClick={onclickHandler}>🔍</button>
+      </div>
+    </div>
+  </header>
+
+
+  <div class='ml-20 mt-6'>
+   <h1 class='font-mono ml-10 mb-7'>GitHub User</h1> 
+    <div class='flex items-center' id="UserDetail">
+<!-- user Detail -->
+    </div>
+
+<div class="w-full ml-auto">
+  <h2 class="font-mono font-bold">Repository per Page</h2>
+  <select id="perPage">
+    <option value="10" selected>10</option>
+    <option value="20">20</option>
+    <option value="30">30</option>
+    <option value="40">40</option>
+    <option value="50">50</option>
+    <option value="60">60</option>
+    <option value="70">70</option>
+    <option value="80">80</option>
+    <option value="90">90</option>
+    <option value="100">100</option>
+</select>
+</div>
+
+<div class="flex flex-wrap" id="userRepoDiv">
+<!-- userRepoParent -->
+</div>
+
+<div class="flex justify-center">
+  <!-- Previous Button -->
+  <button  id="Previous" class="flex items-center justify-center px-4 h-10 text-base font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+    Previous
+  </button>
+  <!-- Next Button -->
+  <button id="Next" class="flex items-center justify-center px-4 h-10 ms-3 text-base font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+    Next
+  </button>
+</div>
+
+
+</div>
+
+<script src="./script.js"></script>
+<script src="./script2.js"></script>
+</body>
+</html>
